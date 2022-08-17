@@ -6,9 +6,9 @@ import requests
 import json_helper
 import pyuac
 
-links_path = 'C:\\Users\\adamo\\PycharmProjects\\programInstaller\\links.json'
-installation_seq = 'C:\\Users\\adamo\\PycharmProjects\\programInstaller\\automation_sequence.json'
-download_location = 'C:\\Users\\adamo\\PycharmProjects\\programInstaller\\installation files\\'
+links_path = 'C:\\Users\\adamo\\PycharmProjects\\Programs_Installer\\links.json'
+installation_seq = 'C:\\Users\\adamo\\PycharmProjects\\Programs_Installer\\automation_sequence.json'
+download_location = 'C:\\Users\\adamo\\PycharmProjects\\Programs_Installer\\installation files\\'
 file_type = '.exe'
 
 
@@ -17,6 +17,7 @@ def get_Installations():
     links = json_helper.get_json(links_path)
     for key in links.keys():
         try:
+            print(key)
             with open(download_location + key + file_type, 'wb') as file:
                 response = requests.get(links[key])
                 file.write(response.content)
@@ -30,28 +31,28 @@ def installaiton():
     seq = json_helper.get_json(installation_seq)  # getting the automation sequences for installations
     for file in seq.keys():
         app = Application().start(
-        cmd_line=r'C:\\Users\\adamo\\PycharmProjects\\programInstaller\\installation files\\steam.exe')
+            cmd_line=r''+ download_location + file + file_type)
         time.sleep(2)
         for bottun in seq[file]:
             time.sleep(2)
             send_keys(bottun)
 
-
 get_Installations()
-installaiton()
+def main():
+    get_Installations()
+    # installaiton()
 
 
-# def main():
-#     get_Installations()
-#     installaiton()
-#
-# if __name__ == "main":
-#     # making sure we run as admin before starting
-#     if not pyuac.isUserAdmin():
-#         pyuac.runAsAdmin()
-#     else:
-#         main()
+# TODO: need to fix the run as admin
+if __name__ == "main":
+    # making sure we run as admin before starting
+    # if not pyuac.isUserAdmin():
+    #     pyuac.runAsAdmin()
+    # else:
+    main()
 
+
+# TODO: need to make a function for getting the currect download link in case the link has changed (with BS)
 # with open('m.exe', 'wb') as file:
 #     resonse = requests.get('https://laptop-updates.brave.com/download/XWV588')
 #     file.write(resonse.content)
