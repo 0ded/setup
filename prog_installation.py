@@ -31,26 +31,25 @@ def installaiton():
     seq = json_helper.get_json(installation_seq)  # getting the automation sequences for installations
     for file in seq.keys():
         app = Application().start(
-            cmd_line=r''+ download_location + file + file_type)
+            cmd_line=r'' + download_location + file + file_type)
         time.sleep(2)
         for bottun in seq[file]:
             time.sleep(2)
             send_keys(bottun)
 
-get_Installations()
+
 def main():
     get_Installations()
     # installaiton()
 
 
 # TODO: need to fix the run as admin
-if __name__ == "main":
+if __name__ == '__main__':
     # making sure we run as admin before starting
     # if not pyuac.isUserAdmin():
     #     pyuac.runAsAdmin()
     # else:
     main()
-
 
 # TODO: need to make a function for getting the currect download link in case the link has changed (with BS)
 # with open('m.exe', 'wb') as file:
