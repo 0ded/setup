@@ -1,0 +1,7 @@
+{
+  "steam": "https://cdn.cloudflare.steamstatic.com/client/installer/SteamSetup.exe",
+  "discord": "https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x86",
+  "vlc": "https://mirror.library.ucy.ac.cy/videolan/vlc/3.0.17.4/win64/vlc-3.0.17.4-win64.exe",
+  "malwarebytes": "https://www.malwarebytes.com/api/downloads/mb-windows?filename=MBSetup-37335.37335.exe",
+  "winrar": "https://www.win-rar.com/postdownload.html?&L=0"
+}

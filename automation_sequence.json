@@ -1,0 +1,28 @@
+{
+  "steam": [
+    "{ENTER}",
+    "{ENTER}",
+    "{ENTER}",
+    "{SPACE}",
+    "{ENTER}"
+  ],
+  "vlc": [
+    "{ENTER}",
+    "{ENTER}",
+    "{ENTER}",
+    "{UP}",
+    "{UP}",
+    "{UP}",
+    "{ENTER}",
+    "{ENTER}",
+    "{SPACE}",
+    "{ENTER}"
+  ],
+  "chrome": [],
+  "discord": [],
+  "winrar": [
+    "{ENTER}",
+    "{ENTER}",
+    "{ENTER}"
+  ]
+}
