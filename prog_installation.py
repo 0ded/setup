@@ -6,9 +6,9 @@ import requests
 import json_helper
 import pyuac
 
-links_path = 'C:\\Users\\adamo\\PycharmProjects\\Programs_Installer\\links.json'
-installation_seq = 'C:\\Users\\adamo\\PycharmProjects\\Programs_Installer\\automation_sequence.json'
-download_location = 'C:\\Users\\adamo\\PycharmProjects\\Programs_Installer\\installation files\\'
+links_path = '.\\links.json'
+installation_seq = '.\\automation_sequence.json'
+download_location = '.\\installation files\\'
 file_type = '.exe'
 
 
