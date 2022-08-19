@@ -27,15 +27,15 @@ def get_Installations():
 
 
 # this function install each file with it's installation sequence, the sequence is stored inside the json file
-def installaiton():
+def auto_installer():
     seq = json_helper.get_json(installation_seq)  # getting the automation sequences for installations
     for file in seq.keys():
         app = Application().start(
             cmd_line=r'' + download_location + file + file_type)
         time.sleep(2)
-        for bottun in seq[file]:
+        for key in seq[file]:
             time.sleep(2)
-            send_keys(bottun)
+            send_keys(key)
 
 
 def main():
