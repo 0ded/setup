@@ -16,4 +16,4 @@ c:/temp/git.exe /SP- /VERYSILENT /SUPPRESSMSGBOXES /NOCANCEL /NORESTART /CLOSEAP
 
 pause
 
-
+$env:Path += ";c:\Program Files\Git\bin"
